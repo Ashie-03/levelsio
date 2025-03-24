@@ -1,0 +1,92 @@
+/* SpaceShip.css */
+.spaceship-container {
+  width: 100%;
+  height: 100%;
+  background-color: #1a1a1a;
+  background-image: radial-gradient(circle at 50% 50%, #2c3e50 0%, #1a1a1a 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.notification {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(52, 73, 94, 0.9);
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 500px;
+  text-align: center;
+  z-index: 100;
+  box-shadow: 0 0 20px rgba(52, 152, 219, 0.7);
+}
+
+.notification h3 {
+  color: #e74c3c;
+  margin-bottom: 10px;
+}
+
+.area {
+  position: absolute;
+  background-color: rgba(52, 73, 94, 0.8);
+  border-radius: 10px;
+  border: 2px solid #7f8c8d;
+  transition: all 0.3s;
+}
+
+.area.active {
+  border-color: #f1c40f;
+  box-shadow: 0 0 15px rgba(241, 196, 15, 0.7);
+}
+
+.area.completed {
+  background-color: rgba(39, 174, 96, 0.8);
+}
+
+.area-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.player {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  transform: translate(-50%, -50%);
+  z-index: 50;
+  cursor: pointer;
+}
+
+.player-avatar {
+  width: 100%;
+  height: 100%;
+  background-color: #3498db;
+  border-radius: 50%;
+  border: 2px solid #2980b9;
+  box-shadow: 0 0 10px rgba(52, 152, 219, 0.7);
+  transition: transform 0.2s;
+}
+
+.player:hover .player-avatar {
+  transform: scale(1.1);
+}
+
+.interaction-button {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background-color: #f1c40f;
+  color: #34495e;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  z-index: 100;
+}
